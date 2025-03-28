@@ -8,9 +8,9 @@ if os.path.exists("db.json"):
         people = json.load(f)
 
     thechosenone = random.choice(people)
-    thechosenone_bytes = thechosenone.encode("ascii") # Chosen one as raw base64 bytes for decoding
+    thechosenone_bytes = thechosenone.encode("utf-8") # Chosen one as raw base64 bytes for decoding
     thechosenone_trans_bytes = base64.b64decode(thechosenone_bytes) # Chosen one, translated, as raw bytes
-    thechosenone_trans = thechosenone_trans_bytes.decode("ascii") # Now, as readable text
+    thechosenone_trans = thechosenone_trans_bytes.decode("utf-8") # Now, as readable text
     
     #print("DEBUGGING: List before: "+ str(people)) # for debugging only
 
