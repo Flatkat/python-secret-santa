@@ -25,7 +25,7 @@ if os.path.exists("db.json"):
         print("")
         people.remove(thechosenone)
         with open("db.json", "w") as f:
-            json.dump(people, f, indent=4)
+            json.dump(people, f)
         print("Done! " + thechosenone_trans + " was removed from the list, now you can share the DB file with the next person!")
         print("Remember to copy the name in Base64 before closing the program if needed!")
 
@@ -34,4 +34,4 @@ else:
     print("File is missing, an example list will be created (program will close afterwards)")
     people = ["S3Jpcw==", "U3VzaWU=", "UmFsc2Vp", "Tm9lbGxl", "QmVyZGx5"]
     with open("db.json", "w") as f:
-        json.dump(people, f, indent=4)
+        json.dump(people, f)
